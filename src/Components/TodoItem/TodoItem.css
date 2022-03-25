@@ -1,0 +1,23 @@
+.todo-item {
+    background: #50597b;
+    height: 100%;
+    width: 100%;  
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.checkbox-description-container {
+    margin-left: 16px;
+    display: flex;
+    align-items: center;
+}
+
+.checkbox-description-container p {
+    margin-left: 16px;
+}
+
+.delete-icon-container {
+    margin-right: 16px;
+}

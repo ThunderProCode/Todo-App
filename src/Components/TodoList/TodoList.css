@@ -1,0 +1,20 @@
+.todo-list-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 24px;
+    width: 100%;
+}
+
+.todo-list {
+    display: grid;
+    grid-template-rows: auto;
+    row-gap: 12px;
+    color: white;
+    padding: 12px;
+    margin: 0;
+    width: 60%;
+    background: #394264;
+    list-style:none;
+    text-align: center;
+    border-radius: 4px;
+}

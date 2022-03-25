@@ -5,8 +5,7 @@ import { TodoList } from "./Components/TodoList/TodoList";
 import { TodoItem } from "./Components/TodoItem/TodoItem";
 import { CreateTodoButton } from "./Components/CreateTodoButton/CreateTodoButton";
 
-// import logo from './logo.svg';
-//import './App.css';
+import './App.css';
 
 const todos = [
   { text:'Cortar cebolla',
@@ -22,7 +21,7 @@ const todos = [
 
 function App() {
   return (
-    <React.Fragment>
+    <div className="main-container">
         <TodoCounter />
         <TodoSearch />
         
@@ -35,8 +34,7 @@ function App() {
         
         <CreateTodoButton />
 
-    </React.Fragment>
-
+    </div>
   );
 }
 
