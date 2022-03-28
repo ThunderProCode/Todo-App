@@ -14,7 +14,7 @@ function TodoSearch () {
         <section className="todo-search">
             <input  
                 className="searchbar" 
-                placeholder="Type here"
+                placeholder="Search for Todos"
                 value={ searchValue }
                 onChange={ onSearchValueChange }
             />

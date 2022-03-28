@@ -26,7 +26,7 @@ function AppUI (){
             <TodoList>
                 { error && <p className="message" >Error ocurred</p> }
                 { loading && <p className="message">Loading... Please wait</p> }
-                { (!loading && !searchedTodos.length) && <p className="message">Create your first ToDo</p>}
+                { (!loading && !searchedTodos.length) && <p className="message">Create your first Todo</p>}
                 { searchedTodos.map( todo => (
                     <TodoItem 
                         key={todo.text} 
