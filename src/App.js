@@ -15,7 +15,13 @@ const defaultTodos = [
   { text:'Aprender React',
     completed: false
   },
-  { text:'Llorar con la llorona',
+  { text:'Learn Webpack',
+    completed: false
+  },
+  { text:'Learn react Hooks',
+    completed: false
+  },
+  { text:'Learn redux',
     completed: false
   }
 ];
@@ -85,8 +91,6 @@ function App() {
               ))
             }
           </TodoList> 
-          
-          <CreateTodoButton />
       </main>
     </React.Fragment>
   );
