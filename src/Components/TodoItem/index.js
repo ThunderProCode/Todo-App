@@ -1,5 +1,5 @@
 import React from "react";
-import './TodoItem.css';
+import './styles.css';
 import { AiFillCheckSquare } from "react-icons/ai";
 import { AiOutlineBorder } from "react-icons/ai";
 

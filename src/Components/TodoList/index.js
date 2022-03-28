@@ -1,5 +1,5 @@
 import React from "react";
-import './TodoList.css';
+import './styles.css';
 import { AiFillPlusSquare } from 'react-icons/ai';
 
 function TodoList(props) {
