@@ -2,9 +2,28 @@ header {
     background: #394264;
     padding: 8px;
     margin: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 header h1 {
     color: white;
     margin: 0;
+}
+
+.contact-info {
+    display: flex;
+    align-items: center;
+}
+
+a {
+    display: flex;
+    align-items: center;
+}
+.icon {
+    width: 20px;
+    height: 20px;
+    fill: white;
+    margin: 4px;
 }
