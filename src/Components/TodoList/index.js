@@ -1,26 +1,33 @@
 import React from "react";
 import './styles.css';
 import { AiFillPlusSquare } from 'react-icons/ai';
-import { TodoContext } from "../../app/TodoContext";
 
 function TodoList(props) {
 
-    const { openModal, setOpenModal } = React.useContext( TodoContext );
-
     return (
         <section className="todo-list-container">
+
             <ul className="todo-list">
+
                 <div className="todo-list-header" >
                     Todo-List
                     <AiFillPlusSquare
                         className="add-icon"
-                        onClick={ () => setOpenModal(true) }
+                        onClick={ () => props.setOpenModal(true) }
                     />
                 </div>
+
+                {props.error && props.onError()}
+                {props.loading && props.onLoading()}
+                {(!props.loading && !props.totalTodos) && props.onEmpty()}
+                {( !!props.totalTodos && !props.searchedTodos.length ) && props.onEmptySearchResults(props.searchText)}
+
                 <div className="todo-list-items">
-                    {props.children}
+                    {props.searchedTodos.map(props.render)}
                 </div>
+
             </ul>
+
         </section>
     );
 }
