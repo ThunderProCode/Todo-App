@@ -2,7 +2,7 @@ import React from "react";
 import { TodoContext } from "../../Hooks/useTodos";
 import './styles.css';
 
-function TodoSearch ({ searchValue, setSearchValue }) {
+function TodoSearch ({ searchValue, setSearchValue,loading }) {
 
     const onSearchValueChange = (event) => {
         setSearchValue(event.target.value);
@@ -15,8 +15,8 @@ function TodoSearch ({ searchValue, setSearchValue }) {
                 placeholder="Search for Todos"
                 value={ searchValue }
                 onChange={ onSearchValueChange }
+                disabled={loading}
             />
-            <button type="button" className="search-button">Search</button>
         </section>
     );
 }

@@ -34,14 +34,16 @@ function App() {
 return (
   <>
       <Header/>
-      <main className="main-container">
+        <main className="main-container">
           <TodoCounter
               totalTodos = {totalTodos}
               completedTodos = {completedTodos}
+              loading={loading}
           />
           <TodoSearch
               searchValue = {searchValue}
               setSearchValue = {setSearchValue}
+              loading={loading}
           />
 
           <TodoList
@@ -58,16 +60,19 @@ return (
             onEmpty={() => <SuccessMessage className="message" /> }
             onEmptySearchResults={
                 (searchText) => <p> No results for {searchText} </p>
-            }
-            render={ todo => (
+            }   
+          >
+              {
+                todo => (
                 <TodoItem 
                     key={todo.text} 
                     text={todo.text} 
                     completed={todo.completed}
                     deleteTodo={ ()=> deleteTodo(todo.text) }
                     toggleTodo={ () => toggleTodo(todo.text) }
-                />)}
-          />
+                />) 
+              }
+          </TodoList>
 
           {!!openModal && (
               <Modal>

@@ -23,7 +23,7 @@ function TodoList(props) {
                 {( !!props.totalTodos && !props.searchedTodos.length ) && props.onEmptySearchResults(props.searchText)}
 
                 <div className="todo-list-items">
-                    {props.searchedTodos.map(props.render)}
+                    {props.searchedTodos.map(props.children)}
                 </div>
 
             </ul>
