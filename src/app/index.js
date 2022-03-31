@@ -11,6 +11,8 @@ import { Header } from "../Components/Header";
 import { ErrorMessage } from "../Components/ErrorMessage";
 import { LoadingMessage } from "../Components/LoadingMessage";
 import { SuccessMessage } from "../Components/SuccessMessage/SuccessMessage";
+import { ChangeAlertWithStorageListener } from "../Components/ChangeAlert";
+
 
 import './styles.css';
 
@@ -28,7 +30,8 @@ function App() {
     completedTodos,
     searchValue,
     setSearchValue,
-    addTodo
+    addTodo,
+    sincronizeTodos
 } = useTodos();
 
 return (
@@ -83,6 +86,9 @@ return (
               </Modal>
           )}
       </main>
+      <ChangeAlertWithStorageListener
+        sincronize={sincronizeTodos}
+      />
   </>
 );
 }
